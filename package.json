@@ -1,17 +1,17 @@
 {
   "name": "fb-backend-test",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon index.js"
   },
   "devDependencies": {
     "cors": "^2.8.5",
-    "express": "^5.1.0",
     "nodemon": "^3.1.10"
   },
   "dependencies": {
     "body-parser": "^2.2.0",
-    "dotenv": "^17.2.1"
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2"
   }
 }

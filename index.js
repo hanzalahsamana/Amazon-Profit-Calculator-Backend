@@ -1,8 +1,8 @@
 const express = require("express");
-const cors = require("cors");
 require("dotenv").config();
-const mainRouter = require("./routes/index");
 const bodyParser = require("body-parser");
+const cors = require("cors");
+const mainRouter = require("./routes/routes");
 
 const app = express();
 
@@ -16,16 +16,16 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
-
 app.options("*", cors(corsOptions));
-app.use(bodyParser.json());
 
-app.use("/api/v1", mainRouter);
+app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
   res.send("Oh, you found the server!");
 });
+
+app.use("/api/v1", mainRouter);
+app.all('/{*any}', (req, res, next) => {})
 
 if (process.env.NODE_ENV !== "production") {
   const PORT = process.env.PORT || 5000;
