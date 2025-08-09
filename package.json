@@ -1,0 +1,13 @@
+{
+  "name": "fb-backend-test",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5",
+    "nodemon": "^3.1.10"
+  }
+}
